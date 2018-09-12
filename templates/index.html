@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<div id="container">
+	<div id="sidebar">
+		<!-- Side Bar -->
+		<div class="panel-group" id="accordion">
+			{% for key in subjects %}
+			<div class="panel panel-default" style="margin-bottom: 10px;">
+				<div class="panel-heading">
+					<h6 class="panel-title" style="margin-bottom: 0px;">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ subjects.index(key)+1 }}">{{ subjects.index(key)+1 }}. {{ key }}</a>
+					</h6>
+				</div>
+				<div id="collapse{{ subjects.index(key)+1 }}" class="panel-collapse collapse">
+					<div class="panel-body">
+						{{ subjpic[key] | safe }}
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+

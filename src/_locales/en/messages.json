@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Gate GFG",
+    "description": "Overlay Index for GFG (GATE)"
+  },
+  "appDescription": {
+    "message": "Overlay Index for GFG (GATE)",
+    "description": "The description of the extension."
+  },
+  "btnTooltip": {
+    "message": "Gat GFG",
+    "description": "Tooltip for the button."
+  }
+}
